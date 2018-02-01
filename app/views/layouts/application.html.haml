@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    %meta{content: "width=device-width, user-scalable=no, height=device-height,  initial-scale=1.0, mminimum-scale=1.0, maximum-scale=1.0", name:"viewport"}
+    %title SUMalyzer
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag "https://afeld.github.io/emoji-css/emoji.css"
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    %nav.navbar.navbar-default.navbar-static-top
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
+            %span.sr-only Toggle Navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to root_path, class: 'navbar-brand' do
+            .recorder--small
+
+        - if user_signed_in?
+          .collapse.navbar-collapse#bs-example-navbar-collapse-1
+            %ul.nav.navbar-nav.navbar-right
+              %li.nav-li{ class: "#{params[:controller] == 'observations' ? 'active' : '' }"}
+                = link_to observations_path do
+                  %i.em.em-chart_with_upwards_trend
+              %li.nav-li{ class: "#{params[:controller] == 'patients' ? 'active' : '' }"}
+                = link_to patients_path do
+                  %i.em.em-family
+              %li.nav-li
+                = link_to destroy_user_session_path, method: :delete do
+                  logout
+    .container
+      .row
+        .col-xs-8.col-centered.flash
+          .notice
+            = notice
+          .alert
+            = alert
+      .row
+        .container
+          = yield

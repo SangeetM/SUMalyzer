@@ -1,0 +1,20 @@
+.row
+  .col-md-12
+    %h1 Edit data of Patient #{resource.id}
+
+.row
+  = form_for resource do |f|
+    .col-md-12
+      = render 'form', f: f
+    .col-md-12
+      = f.submit 'Save', class: 'btn btn-primary'
+      = link_to "Cancel", observations_path, class: 'btn btn-default'
+.row
+  .col-md-12
+    %h4 Danger Zone
+    %p
+      Deleting the patient keeps all observations, but destroys the link between these
+      observations and the patient.
+    = link_to patient_path(resource), method: :delete, class: 'btn btn-mini btn-danger' do
+      %i.glyphicon.glyphicon-trash
+      Delete this patient forever

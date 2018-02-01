@@ -1,0 +1,75 @@
+.table {
+  background-color: transparent;
+  border: 0px !important;
+  border-color: transparent !important; 
+};
+
+.table .table-responsive thead {
+  border: 0px !important;  
+  margin-bottom: 10px !important;
+};
+
+tr {
+  border: 0px !important;
+  border-color: transparent;
+};
+
+td {
+  border: 0px !important;
+  border-color: transparent;
+  vertical-align: bottom;
+  line-height: 1.5em;
+};
+
+.btn {
+  margin: 1px;
+};
+
+.btn-warning {
+  background-color: transparent;
+  border: 2px solid $warning;
+  color: $warning;
+  
+  &:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+  };
+};
+
+
+.btn-success {
+  background-color: transparent;
+  border: 2px solid $success;
+};
+
+.btn-default {
+  background-color: transparent;
+  border: 2px solid;
+  color: $wolve;
+  &:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+  };
+};
+
+.btn-primary {
+  background-color: transparent;
+  border: 2px solid;
+  color: $wolve;
+  &:hover {
+    background-color: transparent;
+    color: black;
+    border-color: black;
+  };
+};
+
+h3 {
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.badge {
+  border-radius: 10px;
+}

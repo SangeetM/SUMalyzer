@@ -1,0 +1,67 @@
+$snow: #F7F7F7;
+$sea: #046E8F;
+$wolve: #BABABA;
+$isabelline: #EDEDED;
+$blue: #044B7F;
+$lavender: #BEC2CE;
+$moon_blue: #5AC8FA;
+$dark_metal: #252628;
+$france: #1A8FE3;
+$gun_metal: #293338;
+$outer_space: #43475B;
+$warning: #eea236;
+$success: #5cb85c;
+$default: #333;
+$tumbleweed: #B1CDD6;
+$bone: #E2D9B5;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "observations";
+@import "pages";
+@import "bootstrap_overrides";
+@import "devise_overrides";
+@import "windy";
+@import "navbar"; 
+@import "devise_bootstrap_views";
+@import "patients";
+
+body {
+  background-color: $snow;
+  padding-bottom: 70px;
+};
+
+.footer {
+  width: 15%;
+  color: #34495E;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 20px;
+};
+
+.footer a {
+  color: #34495E;
+};
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+};
+
+.flash {
+  height: 15px;
+  font-size: 12px;
+  margin-bottom: 4px;
+};
+
+.notice {
+  font-weight: 600;
+  text-align: center;
+  color: #2ECC71;
+};
+
+.alert {
+  font-weight: 600;
+  text-align: center;
+  color: #E67E22;
+};

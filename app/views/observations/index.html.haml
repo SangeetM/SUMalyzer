@@ -1,0 +1,27 @@
+.row
+  = form_for Observation.new do |f|
+    .col-xs-12
+      = f.text_field :comment, placeholder: 'What happened?', autofocus: true, class: 'observations--main-input'
+
+.row.observations--timeline
+  .col-xs-12
+    %ul.list.list-unstyled
+      - collection.each do |observation|
+        %li.observations--list-item
+          .col-xs-2.observation--avatar
+            = observation.patient&.avatar
+            .name
+              = observation.patient&.name
+            = link_to edit_observation_path(observation), class: 'btn btn-mini btn-primary' do
+              %i.glyphicon.glyphicon-pencil
+          .col-xs-8
+            .col-xs-12
+              .badge.badge-default
+                %i.em.em-clock4
+                = observation.created_at.strftime("%a, %e %b %Y %H:%M")
+              .badge.badge-info
+                %i.em.em-earth_africa
+                = observation.city || "unknown"
+            .col-xs-10
+              .col-xs-12.observation--comment
+                = observation.comment

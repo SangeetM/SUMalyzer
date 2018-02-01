@@ -1,0 +1,13 @@
+%fieldset
+  .form-group
+    = f.label "Name"
+    = f.text_field :name, class: 'form form-control'
+  .form-group
+    = f.label "Birthday"
+    = f.date_field :birthday, class: 'form form-control'
+  .form-group
+    = f.label "Gender"
+    = f.text_field :gender, class: 'form form-control'
+  .form-group
+    = f.label "Avatar"
+    = f.select :avatar, options_for_select(AVATARS.map{ |emoji| [emoji, emoji] }, resource.avatar), {}, { class: 'form-control' }

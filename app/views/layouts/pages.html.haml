@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title SUMalyzer
+    %meta{content: "width=device-width, user-scalable=no, height=device-height,  initial-scale=1.0, mminimum-scale=1.0, maximum-scale=1.0", name:"viewport"}
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'https://afeld.github.io/emoji-css/emoji.css'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .top-bar--big
+      .row
+        .pull-right
+          .col-xs-8
+            - if user_signed_in?
+              = link_to 'logout', destroy_user_session_path, method: :delete, class: 'btn btn-mini btn-default'
+            - else
+              = link_to 'login', new_user_session_url(protocol: Rails.env.production? ? 'https' : 'http'), class: 'btn btn-mini btn-default'
+      .row.windy-row
+        .col-xs-8.col-xs-offset-2
+          .recorder--big
+          %h2.headline-SUMalyzer--big
+            = link_to "SUMalyzer", root_path
+      .row
+        .col-xs-8.col-xs-offset-2
+          - if user_signed_in?
+            %p.landing-page-text
+              = link_to "Goto app", observations_path, class: 'btn btn-lg btn-warning'
+          - else
+            %p.landing-page-text
+              = link_to "Sign up", new_user_registration_path, class: 'btn btn-lg btn-success'
+    .row
+      .col-xs-8.col-centered.flash
+        .notice
+          = notice
+        .alert
+          = alert
+      .container
+        = yield

@@ -1,0 +1,32 @@
+.row
+  .col-xs-12
+    %h3
+      Patients
+.row
+  .col-md-12
+    .pull-right
+      = link_to new_patient_path, class: 'btn btn-mini btn-primary' do
+        %i.glyphicon.glyphicon-plus
+        New Patient
+    %table.table.table-responsive
+      %thead
+        %th
+        %th ID
+        %th Name
+        %th Birthday
+        %th Gender
+        %th
+      - collection.each do |patient|
+        %tr
+          %td.col-xs-2
+            %span.observation--avatar
+              = patient.avatar
+          %td= patient.id
+          %td= patient.name
+          %td= patient.birthday.to_date
+          %td= patient.gender
+          %td
+            .pull-right
+              = link_to edit_patient_path(patient), class: 'btn btn-mini btn-primary' do
+                %i.glyphicon.glyphicon-pencil
+                edit

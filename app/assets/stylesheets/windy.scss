@@ -1,0 +1,33 @@
+.windy-row {
+  margin-top: 90px;
+};
+.windy {
+  border-radius: 120px;
+  border: 2px solid #ccc;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  background-color: $isabelline;
+};
+
+.windy .inner {
+  font-size: 120px;
+  margin-left: -10px;
+};
+
+.windy--compact {
+  height: 65px;
+  width: 65px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #5AC8FA;
+  margin: 0;
+  margin-left: -15px;
+};
+
+.windy--compact .inner--compact {
+  font-size: 62px;
+  margin-left: -5px;
+};

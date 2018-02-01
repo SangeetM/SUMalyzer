@@ -1,0 +1,11 @@
+.row
+  .col-md-12
+    %h1 Edit patient data of "#{resource.name}"
+
+.row
+  = form_for resource do |f|
+    .col-md-12
+      = render 'form', f: f
+    .col-md-12
+      = f.submit 'Speichern', class: 'btn btn-primary'
+      = link_to "Abbrechen", observations_path, class: 'btn btn-default'

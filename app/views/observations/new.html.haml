@@ -1,0 +1,12 @@
+.row
+  .col-md-12
+    %h1 New observation
+
+.row
+  = form_for resource do |f|
+    .col-md-12
+      = render 'form', f: f
+    .col-md-12
+      = f.submit 'Save', class: 'btn btn-primary'
+      = link_to "Cancel", observations_path, class: 'btn btn-default'
+

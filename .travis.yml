@@ -1,0 +1,14 @@
+language: ruby
+sudo: false
+rvm:
+- 2.4.0
+before_script:
+- psql -c "CREATE USER your_username WITH PASSWORD '';" -U postgres
+- psql -c 'create database rekorder_test' -U postgres
+- bundle exec rake db:migrate RAILS_ENV=test
+script: bundle exec rspec spec
+notifications:
+  email:
+  - neumanrq@gmail.com
+addons:
+  postgresql: '9.3'

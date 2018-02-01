@@ -1,0 +1,72 @@
+.recorder--small {
+  width: 55px;
+  height: 35px;
+  background-image: url(asset_path("SUMalyzer.svg"));
+  margin: 0 auto;
+  margin-top: -5px;
+  background-repeat: no-repeat;
+}
+
+.recorder--big {
+  width: 200px;
+  height: 130px;
+  background-image: url(asset_path("SUMalyzer.svg"));
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+.headline-SUMalyzer--big {
+  margin: auto;
+  text-align: center;
+  font-size: 3em;
+  padding: 5px;
+  font-weight: 900;
+  color: #ECF0F1;
+};
+
+.headline-SUMalyzer--compact {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  font-weight: 900;
+  color: #ECF0F1;
+};
+
+.headline-SUMalyzer--big a {
+  text-decoration: none;
+  color: inherit;
+};
+
+.headline-SUMalyzer--compact a {
+  text-decoration: none;
+  color: inherit;
+};
+
+.emoji {
+  font-size: 2em;
+};
+
+.landing-page-heading {
+  margin-top: 20px;
+  margin-botton: 5px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  opacity: 0.8;
+};
+
+.landing-page-text {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 10px;
+};
+
+.observations-table {
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  margin: 1px;
+  padding: 0px;
+  background-color: #F9FBFC;
+};
