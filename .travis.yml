@@ -9,6 +9,6 @@ before_script:
 script: bundle exec rspec spec
 notifications:
   email:
-  - neumanrq@gmail.com
+  - dassangeet768@gmail.com
 addons:
   postgresql: '9.3'
